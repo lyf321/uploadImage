@@ -44,6 +44,7 @@ let storage = multer.diskStorage({
 var upload = multer({storage: storage});
 
 app.post("/upload", upload.single('files'), function (req, res) {
+    console.log(req.file)
     console.log(path.basename(req.file.path));
 
     res.json({code: 200, filePath: 'http://' + req.headers.host + '/upload/' + path.basename(req.file.path)});

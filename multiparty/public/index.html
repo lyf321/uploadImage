@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>multiparty Upload File</title>
+    <link type="text/css" rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet"
+          href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div class="container">
+
+    <form class="form-horizontal" enctype='multipart/form-data' method='post' action='javascript:;' role="form"
+          id="frmUploadFile">
+        <label class="control-label col-sm-2">上传选择</label>
+        <input type="file" name="files" class="form-control"/>
+
+        <button class="btn btn-primary" onClick="uploadImage()">上传</button>
+        <span class="help-inline" id="spanMessage">选择文件，并上传</span>
+    </form>
+
+    <div>
+        <img id="imgShow" src="./upload/sale.png"/>
+    </div>
+</div>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="multiparty.js"></script>
+</body>
+</html>
