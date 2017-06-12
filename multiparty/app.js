@@ -9,22 +9,6 @@ let app = express();
 app.use(express.static('./public'));
 
 app.post("/upload", function (req, res) {
-    // // 解析一个文件上传
-    // var form = new multiparty.Form();
-    // //设置编辑
-    // form.encoding = 'utf-8';
-    // //设置文件存储路径
-    // form.uploadDir = "public/images/";
-    //
-    // form.parse(req, function (err, fields, files) {
-    //     console.log(files.originalFilename);
-    //     console.log(files.path);
-    //     //同步重命名文件名
-    //     fs.renameSync(files.path, files.originalFilename);
-    //     res.writeHead(200, {'content-type': 'text/plain'});
-    //     res.write('received upload:\n\n');
-    //     res.end(util.inspect({fields: fields, files: files}));
-    // });
 
     //生成multiparty对象，并配置上传目标路径
     var form = new multiparty.Form({uploadDir: './public/upload/'});
